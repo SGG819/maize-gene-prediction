@@ -1,29 +1,38 @@
-<html lang="zh-CN<head>
-   <meta charset="UTF-<!-- 适配手机端，保证网页在不同设备正常显示 --><meta name="viewport" content="width=device-width, initial-scale=1<!-- 网页标题，浏览器标签页显示 -->
-    玉米基因预测系统<!-- 网页样式设计，让页面更专业美观 -->
-<style>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <!-- 适配手机端，保证网页在不同设备正常显示 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 网页标题，浏览器标签页显示 -->
+    <title>玉米基因预测系统</title>
+    <!-- 网页样式设计，让页面更专业美观 -->
+    <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             font-family: "Microsoft YaHei", Arial, sans-serif;
         }
+
         /* 页面整体背景 */
         body {
             background-color: #f5f7fa;
             color: #333;
             line-height: 1.6;
         }
+
         /* 导航栏样式 */
         .navbar {
             background-color: #2E7D32;
             color: white;
             padding: 15px 50px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             position: sticky;
             top: 0;
             z-index: 100;
         }
+
         .nav-container {
             max-width: 1200px;
             margin: 0 auto;
@@ -31,6 +40,7 @@
             justify-content: space-between;
             align-items: center;
         }
+
         .logo {
             font-size: 24px;
             font-weight: bold;
@@ -38,23 +48,28 @@
             align-items: center;
             gap: 10px;
         }
+
         .nav-menu {
             display: flex;
             gap: 30px;
             list-style: none;
         }
+
         .nav-menu a {
             color: white;
             text-decoration: none;
             font-size: 16px;
             transition: color 0.3s;
         }
+
         .nav-menu a:hover {
             color: #C8E6C9;
         }
+
         /* 首页banner区域 */
         .banner {
-            background: linear-gradient(rgba(46, 125, 50, 0.8), rgba(46, 125, 50, 0.8)), url('https://pic.baike.soso.com/ugc/baikepic2/21816/cut-0-20230920160406-755893516.jpg');
+            background: linear-gradient(rgba(46, 125, 50, 0.8), rgba(46, 125, 50, 0.8)), 
+                        url('https://pic.baike.soso.com/ugc/baikepic2/21816/cut-0-20230920160406-755893516.jpg');
             background-size: cover;
             background-position: center;
             color: white;
@@ -62,21 +77,25 @@
             padding: 80px 20px;
             margin-bottom: 40px;
         }
+
         .banner h1 {
             font-size: 42px;
             margin-bottom: 15px;
         }
+
         .banner p {
             font-size: 18px;
             max-width: 800px;
             margin: 0 auto;
         }
+
         /* 核心内容区域 */
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
         }
+
         .section-title {
             text-align: center;
             font-size: 28px;
@@ -84,6 +103,7 @@
             margin-bottom: 30px;
             position: relative;
         }
+
         .section-title::after {
             content: '';
             width: 60px;
@@ -92,6 +112,7 @@
             display: block;
             margin: 10px auto;
         }
+
         /* 功能模块卡片 */
         .function-box {
             display: grid;
@@ -99,27 +120,32 @@
             gap: 25px;
             margin-bottom: 50px;
         }
+
         .card {
             background: white;
             border-radius: 8px;
             padding: 30px 25px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
             text-align: center;
             transition: transform 0.3s;
         }
+
         .card:hover {
             transform: translateY(-5px);
         }
+
         .card h3 {
             color: #2E7D32;
             font-size: 20px;
             margin-bottom: 15px;
         }
+
         .card p {
             color: #666;
             font-size: 15px;
             margin-bottom: 20px;
         }
+
         .card-btn {
             display: inline-block;
             padding: 8px 20px;
@@ -129,14 +155,17 @@
             border-radius: 4px;
             transition: background-color 0.3s;
         }
+
         .card-btn:hover {
             background-color: #1B5E20;
         }
+
         /* 数据库连接测试按钮 */
         .db-test {
             text-align: center;
             margin: 40px 0;
         }
+
         .db-btn {
             padding: 12px 35px;
             font-size: 16px;
@@ -147,9 +176,11 @@
             cursor: pointer;
             transition: background-color 0.3s;
         }
+
         .db-btn:hover {
             background-color: #0D47A1;
         }
+
         /* 页脚 */
         .footer {
             background-color: #2E7D32;
@@ -158,32 +189,73 @@
             padding: 20px;
             margin-top: 60px;
             font-size: 14px;
-       </style><body<!-- 导航栏：网页顶部菜单，方便跳转功能 -->
-   <nav class="navbar"><div class="nav-container">
-            <div class="logo">🌽 玉米基因预测系统<ul class="nav-menu">
-<a href="#home">首页</a></li>
-                <a href="#function">系统功能</a><li<a href="#data"></li>
-                <li><a href="#test">数据库</li></ul>
-</div>
-   <!-- 首页banner：系统标题和简介，第一眼展示系统<section class="banner" id="<h1>玉米基因预测与</h1<p>专注玉米基因组数据管理、基因精准预测、农艺性状关联分析，为玉米分子育种与科研提供高效</p>
-</section>
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏：网页顶部菜单，方便跳转功能 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">🌽 玉米基因预测系统</div>
+            <ul class="nav-menu">
+                <li><a href="#home">首页</a></li>
+                <li><a href="#function">系统功能</a></li>
+                <li><a href="#data">数据库</a></li>
+                <li><a href="#test">测试</a></li>
+            </ul>
+        </div>
+    </nav>
 
-   <!-- 核心功能区：系统主要功能模块，清晰展示用途 -->
+    <!-- 首页banner：系统标题和简介，第一眼展示系统 -->
+    <section class="banner" id="home">
+        <h1>玉米基因预测与分析系统</h1>
+        <p>专注玉米基因组数据管理、基因精准预测、农艺性状关联分析，为玉米分子育种与科研提供高效、精准的数据分析支撑</p>
+    </section>
+
+    <!-- 核心功能区：系统主要功能模块，清晰展示用途 -->
     <div class="container">
-<section id="function<h2 class="section-title">核心</h2><div class="<!-- 基因数据管理卡片 --><div class="<h3>基因数据管理</h3>
-                    <p>批量导入玉米基因序列、基因型数据，实现数据的分类存储、查询与编辑，支持大数据量</p>
-<a href="#" class="card-btn">进入管理</a>
-                <!-- 基因预测卡片 -->
-               <div class="card"><h3></h3<p>依托AI模型完成玉米基因结构预测、功能注释，快速识别目标基因，输出</p><a href="#" class="card-btn">开始</a>
-               <!-- 性状关联分析卡片 --><div class="<h3>性状关联分析</h3>
-                    <p>关联玉米产量、抗病、抗倒伏等农艺性状，挖掘基因与性状的对应关系，支撑</p>
-<a href="#" class="card-btn">分析数据</a>
-                <!-- 结果导出卡片 -->
-               <div class="card"><h3></h3<p>支持基因预测结果、性状分析报告以Excel/CSV格式导出，方便后续科研</p><a href="#" class="card-btn">导出</a>
+        <section id="function">
+            <h2 class="section-title">核心功能</h2>
+            <div class="function-box">
+                <!-- 基因数据管理卡片 -->
+                <div class="card">
+                    <h3>基因数据管理</h3>
+                    <p>批量导入玉米基因序列、基因型数据，实现数据的分类存储、查询与编辑，支持大数据量高效处理</p>
+                    <a href="#" class="card-btn">进入管理</a>
                 </div>
-            </section<!-- 数据库测试按钮：直接链接后端数据库测试接口 -->
-       <section id="test" class="db-test">
-<button class="db-btn" onclick="window.location.href='/test-db'">测试数据库连接状态</section</div><!-- 页脚：系统版权信息，更显专业 -->
+
+                <!-- 基因预测卡片 -->
+                <div class="card">
+                    <h3>基因精准预测</h3>
+                    <p>依托AI模型完成玉米基因结构预测、功能注释，快速识别目标基因，输出高精度预测结果</p>
+                    <a href="#" class="card-btn">开始预测</a>
+                </div>
+
+                <!-- 性状关联分析卡片 -->
+                <div class="card">
+                    <h3>性状关联分析</h3>
+                    <p>关联玉米产量、抗病、抗倒伏等农艺性状，挖掘基因与性状的对应关系，支撑育种决策</p>
+                    <a href="#" class="card-btn">分析数据</a>
+                </div>
+
+                <!-- 结果导出卡片 -->
+                <div class="card">
+                    <h3>结果导出</h3>
+                    <p>支持基因预测结果、性状分析报告以Excel/CSV格式导出，方便后续科研分析与存档</p>
+                    <a href="#" class="card-btn">导出数据</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 数据库测试按钮：直接链接后端数据库测试接口 -->
+        <section id="test" class="db-test">
+            <button class="db-btn" onclick="window.location.href='/test-db'">测试数据库连接状态</button>
+        </section>
+    </div>
+
+    <!-- 页脚：系统版权信息，更显专业 -->
     <footer class="footer">
-<p>© 2026 玉米基因预测系统 | 专注玉米基因组科研与应用</footer</body>
+        <p>© 2026 玉米基因预测系统 | 专注玉米基因组科研与应用</p>
+    </footer>
+</body>
 </html>
